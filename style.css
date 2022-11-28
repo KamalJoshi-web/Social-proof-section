@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+main{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+/* main-grid-container */
+.main-grid-container{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'head'
+        'boxes';
+    max-width: 90%;
+}
+/* main-grid-container1 */
+.sub-grid-container1{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 'info rating';
+    gap: 10rem;
+    margin-bottom: 5rem;
+}
+
+.right-part{
+    grid-area: info;
+}
+.heading{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: hsl(300, 43%, 22%);
+}
+.para{
+    line-height: 24px;
+    padding-right: 8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: hsl(303, 10%, 53%);
+}
+.left-part{
+    grid-area: rating;
+    align-self: center;
+}
+.rate-style{
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    background-color: hsl(300, 24%, 96%);
+    margin: 1rem 0rem;
+}
+.rate-style > div{
+    display: contents;
+}
+.rate2{
+   margin-left: 2.5rem;
+}
+.rate3{
+   margin-left: 5rem;
+}
+.text{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+/* main-grid-container2 */
+.sub-grid-container2{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 'box1 box2 box3';
+    gap: 2rem;
+    
+}
+
+.intros1{
+    grid-area: box1;
+    margin-bottom: 4rem;
+   
+}
+.intros2{
+    grid-area: box2;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+   
+}
+.intros3{
+    grid-area: box3;
+    margin-top: 4rem;
+}
+
+.box-style{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+   
+}
+.char{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem;
+    
+}
+.char > img{
+    border-radius: 50%;
+    width: 3.5rem;
+}
+.status > h3{
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 500;
+}
+.status > h4{
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 85%;
+    color: hsl(333, 80%, 67%);
+}
+.box-style > h2{
+    margin: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 29px;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width:1275px) {
+    .sub-grid-container1{
+        gap: 5rem;
+    }
+    .heading{
+        font-size: 3.5rem;
+    }
+    .rate-style{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+   .sub-grid-container1{
+    grid-template-areas: 
+    'info'
+    'rating';
+    gap: 2rem;
+   } 
+   .heading{
+    font-size: 3.5rem; 
+    text-align: center;
+   }
+   .para{
+    padding-right: 0rem;
+    text-align: center;
+   }
+   .rate-style >  div{
+    display: block;
+    margin-left: auto;
+   }
+   .rate2{
+    margin: 2rem 0rem;
+   }
+   .rate3{
+    margin: 1rem 0rem;
+   }
+   .left-part{
+    grid-area: rating;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   }
+
+   .sub-grid-container2{
+    grid-template-areas: 
+    'box1'
+    'box2'
+    'box3';
+   }
+   .intros1{
+    margin: 0;
+   }
+   .intros2{
+    margin: 0;
+   }
+   .intros3{
+    margin: 0;
+   }
+}
+@media screen and (max-width:280px) {
+    .char{
+        flex-direction: column;
+    }
+    .box-style > h2{
+        text-align: center;
+    }
+}
